@@ -1,0 +1,27 @@
+---
+ - name: Installing lamp server
+ host: all
+ tasks: 
+ - name: httpd install
+    become: yes
+     become_method: sudo
+   yum: 
+    name: httpd
+     state: latest 
+
+     name: mysql-server 
+      state: latest 
+
+       name: php
+        state: latest 
+
+         notify:
+                  - restart apache
+
+ - name: restart apache server 
+    service: 
+     name: httpd 
+     state: restarted
+      enabled: yes
+
+
