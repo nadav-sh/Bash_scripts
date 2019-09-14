@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 #
 ################################################################################
-#developer: pushtakio
-#purpose: to say hello
+#developer: nadav
+#purpose: to say hello user
 #date: 08/09/2019
 #ver: 1.0.0
 ################################################################################

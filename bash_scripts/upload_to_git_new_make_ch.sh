@@ -15,8 +15,8 @@ Error=
 succ=
 
 #Array \\\\\\\///////\\\\\\//////
-#array_y=(yes YES y Y)
-#array_n=(no NO n N)
+array_y=('yes' 'YES' 'y' 'Y')
+array_n=('no' 'NO' 'n' 'N')
 
 #Function :::::::::::::::::::::::::::::::::::::::::::::
  _yes() {
@@ -64,9 +64,9 @@ sleep 2
 read -p "are you interested in uploading all files (yes or no)?" upload
 	echo "You have chosen $upload " 
 	
-if [ $upload = yes  ];then
+if [ $upload = $array_y[*]  ];then
 	_yes 
-	else [ $upload = no ]
+	else [ $upload = $array_n[*] ]
 	_no
 	sleep 1
 	fi
