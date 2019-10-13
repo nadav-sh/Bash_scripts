@@ -9,7 +9,7 @@ set -x
 
 #Variables /\//\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 #
-upload=$#
+upload=$@
 Files=$@
 Error=
 succ=
@@ -61,12 +61,12 @@ _Err() {
 echo "you are runnig a sctipt to update files to GitHub"
 sleep 2
 
-read -p "are you interested in uploading all files (yes or no)?" upload
+read -p "are you interested in uploading all files (yes or no)? " upload
 	echo "You have chosen $upload " 
 	
-if [  $upload = yes  ] |  [  $upload = YES  ] | [  $upload = y  ] | [ $upload = Y ] ;then
+if [ $upload = yes ] ||  [ $upload = YES ] || [ $upload = y ] || [ $upload = Y ];then
 	_yes 
-	else [ $upload = no ] |  [ $upload = NO ] | [ $upload = n ] | [ $upload = N ] 
+	else [ $upload = no ] ||  [ $upload = NO ] || [ $upload = n ] || [ $upload = N ] 
 	_no
 	sleep 1
 	fi
